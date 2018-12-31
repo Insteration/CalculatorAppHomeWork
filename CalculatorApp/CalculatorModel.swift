@@ -68,6 +68,7 @@ class Calculator: CalculatorProtocol {
         //    }
         result &+= number
         number = 0
+        print("result is \(result)")
         return String(result)
     }
     
