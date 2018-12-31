@@ -10,10 +10,10 @@ import Foundation
 
 protocol CalculatorProtocol {
     func operationSetNumber(_ numeral: String) -> String
-    func operationPlus() -> Double
-    func operationMinus() -> Double
-    func operationDivision() -> Double
-    func operationMultiplication() -> Double
+    func operationPlus() -> String
+    func operationMinus() -> String
+    func operationDivision() -> String
+    func operationMultiplication() -> String
     func operationClear() -> String
     func operationResult() -> String
 }
@@ -32,21 +32,27 @@ class Calculator: CalculatorProtocol {
         return String(number)
     }
     
-    
-    func operationPlus() -> Double {
-        return 0.0
+    func operationPlus() -> String {
+        if result == 0 {
+            result = number
+        } else {
+            result &+= number
+        }
+        number = 0
+        print(result)
+        return String(result)
     }
     
-    func operationMinus() -> Double {
-        return 0.0
+    func operationMinus() -> String {
+        return "0"
     }
     
-    func operationDivision() -> Double {
-        return 0.0
+    func operationDivision() -> String {
+        return "0"
     }
     
-    func operationMultiplication() -> Double {
-        return 0.0
+    func operationMultiplication() -> String {
+        return "0"
     }
     
     func operationClear() -> String {
@@ -56,7 +62,14 @@ class Calculator: CalculatorProtocol {
         return "0"
     }
     func operationResult() -> String {
-        return ""
+        //    mutating func getResult() -> String {
+        //        result &+= number
+        //        number = 0
+        //        return String(tmp)
+        //    }
+        result &+= number
+        number = 0
+        return String(result)
     }
     
 }

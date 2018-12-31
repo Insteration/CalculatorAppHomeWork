@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet var calculatorMathmaticalOperations: [UIButton]!
     
     @IBAction func calculatorClearButton(_ sender: UIButton) {
-       calculatorLabelText.text = calculator.operationClear()
+        calculatorLabelText.text = calculator.operationClear()
     }
     
     @IBAction func calculatorNumbersPressButton(_ sender: UIButton) {
@@ -30,8 +30,23 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func calculatorResultButton(_ sender: UIButton) {
-        
+    @IBAction func calculatorMathmaticalOperationButton(_ sender: UIButton) {
+        if let calculatorMathmaticalOperation = calculatorMathmaticalOperations.index(of: sender) {
+            switch calculatorMathmaticalOperation {
+            case 0:
+                calculator.operationPlus()
+            case 1:
+                ()
+            case 2:
+                ()
+            case 3:
+                ()
+            case 4:
+                calculator.operationResult()
+            default:
+                ()
+            }
+        }
     }
     
     override func viewDidLoad() {

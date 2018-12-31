@@ -178,6 +178,9 @@
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="50"/>
                                         <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="calculatorMathmaticalOperationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9J2-xB-i7a"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tqh-l1-svE">
                                         <rect key="frame" x="77" y="0.0" width="74.5" height="70"/>
@@ -185,6 +188,9 @@
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="50"/>
                                         <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <state key="normal" title="-"/>
+                                        <connections>
+                                            <action selector="calculatorMathmaticalOperationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kQW-C7-buv"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tym-ip-wEI">
                                         <rect key="frame" x="153.5" y="0.0" width="75" height="70"/>
@@ -192,6 +198,9 @@
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="50"/>
                                         <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <state key="normal" title="*"/>
+                                        <connections>
+                                            <action selector="calculatorMathmaticalOperationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VwQ-2j-aZi"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5t-fw-D7l">
                                         <rect key="frame" x="230.5" y="0.0" width="74.5" height="70"/>
@@ -199,6 +208,9 @@
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="50"/>
                                         <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <state key="normal" title="/"/>
+                                        <connections>
+                                            <action selector="calculatorMathmaticalOperationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Glx-ky-DOS"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKU-VJ-CGF">
                                         <rect key="frame" x="307" y="0.0" width="75" height="70"/>
@@ -207,7 +219,7 @@
                                         <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <state key="normal" title="="/>
                                         <connections>
-                                            <action selector="calculatorResultButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e4v-c6-UiI"/>
+                                            <action selector="calculatorMathmaticalOperationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Khi-PJ-hfe"/>
                                         </connections>
                                     </button>
                                 </subviews>
