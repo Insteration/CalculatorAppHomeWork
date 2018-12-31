@@ -14,12 +14,13 @@ protocol CalculatorProtocol {
     func operationDivision() -> Double
     func operationMultiplication() -> Double
     func operationClear() -> String
+    func operationResult() -> String
 }
 
 class Calculator: CalculatorProtocol {
     
-    var result = 0
-    var operand = 0
+   private var result = 0
+   private var operand = 0
     
     func operationPlus() -> Double {
         return 0.0
@@ -43,5 +44,8 @@ class Calculator: CalculatorProtocol {
         print("Clear succesfull")
         return "0"
     }
-    
+    func operationResult() -> String {
+        return ""
+    }
+
 }
