@@ -38,6 +38,9 @@
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="50"/>
                                 <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <state key="normal" title="AC"/>
+                                <connections>
+                                    <action selector="calculatorClearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fPv-pI-n5x"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5bT-Iu-AzU">
                                 <rect key="frame" x="16" y="156" width="288" height="60"/>
@@ -164,6 +167,9 @@
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="50"/>
                                         <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <state key="normal" title="="/>
+                                        <connections>
+                                            <action selector="calculatorResultButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e4v-c6-UiI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -198,6 +204,23 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="calculatorLabelText" destination="7Vg-ik-XX3" id="5cA-Kx-lSh"/>
+                        <outletCollection property="calculatorNumbers" destination="fH7-ff-CWj" collectionClass="NSMutableArray" id="Zge-3a-7hx"/>
+                        <outletCollection property="calculatorNumbers" destination="t2b-9S-MGI" collectionClass="NSMutableArray" id="ftH-Mx-iXG"/>
+                        <outletCollection property="calculatorNumbers" destination="MB4-il-ili" collectionClass="NSMutableArray" id="JkA-cN-E8Z"/>
+                        <outletCollection property="calculatorNumbers" destination="ZE8-UA-378" collectionClass="NSMutableArray" id="YW0-b8-yDi"/>
+                        <outletCollection property="calculatorNumbers" destination="U6Z-Ua-C2R" collectionClass="NSMutableArray" id="zao-H0-UKJ"/>
+                        <outletCollection property="calculatorNumbers" destination="VQ2-ah-Wc2" collectionClass="NSMutableArray" id="yIn-w6-Ydc"/>
+                        <outletCollection property="calculatorNumbers" destination="sEu-EB-V17" collectionClass="NSMutableArray" id="ANO-g8-Ne0"/>
+                        <outletCollection property="calculatorNumbers" destination="DmJ-ev-3g4" collectionClass="NSMutableArray" id="R09-8B-enu"/>
+                        <outletCollection property="calculatorNumbers" destination="yVn-ua-xUF" collectionClass="NSMutableArray" id="2q0-4U-XlP"/>
+                        <outletCollection property="calculatorNumbers" destination="ZPr-vj-v8M" collectionClass="NSMutableArray" id="Odb-LM-idv"/>
+                        <outletCollection property="calculatorMathmaticalOperations" destination="6Pn-zZ-aJV" collectionClass="NSMutableArray" id="FXz-E2-eDw"/>
+                        <outletCollection property="calculatorMathmaticalOperations" destination="Tqh-l1-svE" collectionClass="NSMutableArray" id="jul-oT-SE8"/>
+                        <outletCollection property="calculatorMathmaticalOperations" destination="Tym-ip-wEI" collectionClass="NSMutableArray" id="FRu-q1-FGg"/>
+                        <outletCollection property="calculatorMathmaticalOperations" destination="u5t-fw-D7l" collectionClass="NSMutableArray" id="sSB-wn-uMg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

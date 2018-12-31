@@ -10,9 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var calculatorLabelText: UILabel!
+    @IBOutlet var calculatorNumbers: [UIButton]!
+    @IBOutlet var calculatorMathmaticalOperations: [UIButton]!
+    
+    @IBAction func calculatorClearButton(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func calculatorResultButton(_ sender: UIButton) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
 
