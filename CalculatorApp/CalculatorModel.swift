@@ -13,6 +13,7 @@ protocol CalculatorProtocol {
     func operationMinus() -> Double
     func operationDivision() -> Double
     func operationMultiplication() -> Double
+    func operationClear() -> String
 }
 
 class Calculator: CalculatorProtocol {
@@ -35,4 +36,12 @@ class Calculator: CalculatorProtocol {
     func operationMultiplication() -> Double {
         return 0.0
     }
+    
+    func operationClear() -> String {
+        result = 0
+        operand = 0
+        print("Clear succesfull")
+        return "0"
+    }
+    
 }
