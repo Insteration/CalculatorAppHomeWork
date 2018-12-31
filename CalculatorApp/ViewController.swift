@@ -23,9 +23,9 @@ class ViewController: UIViewController {
     @IBAction func calculatorNumbersPressButton(_ sender: UIButton) {
         if let calculatorNumber = calculatorNumbers.index(of: sender) {
             if calculatorNumber == 9 {
-                calculatorLabelText.text = "0"
+                calculatorLabelText.text = calculator.operationSetNumber("0")
             } else {
-                calculatorLabelText.text = String(calculatorNumber + 1)
+                calculatorLabelText.text = calculator.operationSetNumber(String(calculatorNumber + 1))
             }
         }
     }
