@@ -34,6 +34,7 @@ class ViewController: UIViewController {
         if let calculatorMathmaticalOperation = calculatorMathmaticalOperations.index(of: sender) {
             switch calculatorMathmaticalOperation {
             case 0:
+                calculatorLabelText.text = "+"
                 calculator.operationPlus()
             case 1:
                 ()
@@ -42,7 +43,7 @@ class ViewController: UIViewController {
             case 3:
                 ()
             case 4:
-                calculator.operationResult()
+                calculatorLabelText.text = calculator.operationResult()
             default:
                 ()
             }

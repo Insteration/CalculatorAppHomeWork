@@ -271,6 +271,7 @@
                         <outletCollection property="calculatorMathmaticalOperations" destination="Tqh-l1-svE" collectionClass="NSMutableArray" id="jul-oT-SE8"/>
                         <outletCollection property="calculatorMathmaticalOperations" destination="Tym-ip-wEI" collectionClass="NSMutableArray" id="FRu-q1-FGg"/>
                         <outletCollection property="calculatorMathmaticalOperations" destination="u5t-fw-D7l" collectionClass="NSMutableArray" id="sSB-wn-uMg"/>
+                        <outletCollection property="calculatorMathmaticalOperations" destination="sKU-VJ-CGF" collectionClass="NSMutableArray" id="doz-fP-lMC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -39,7 +39,6 @@ class Calculator: CalculatorProtocol {
             result &+= number
         }
         number = 0
-        print(result)
         return String(result)
     }
     
