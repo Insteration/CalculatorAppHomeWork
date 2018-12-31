@@ -37,11 +37,11 @@ class ViewController: UIViewController {
                 calculatorLabelText.text = "+"
                 calculator.operationPlus()
             case 1:
-                ()
+                calculatorLabelText.text = "-"
             case 2:
-                ()
+                calculatorLabelText.text = "*"
             case 3:
-                ()
+                calculatorLabelText.text = "/"
             case 4:
                 calculatorLabelText.text = calculator.operationResult()
             default:

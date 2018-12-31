@@ -19,13 +19,13 @@ protocol CalculatorProtocol {
 }
 
 class Calculator: CalculatorProtocol {
-    var number = 0 {
+    private var number = 0 {
         didSet {
             print(oldValue)
         }
     }
-    var result = 0
-    var operand = 0
+    private var result = 0
+    private var operand = 0
     
     func operationSetNumber(_ numeral: String) -> String {
         number = Int(String(number) + numeral) ?? 0
@@ -57,7 +57,7 @@ class Calculator: CalculatorProtocol {
     func operationClear() -> String {
         result = 0
         operand = 0
-        print("Clear succesfull")
+        print("Clear succesfull!")
         return "0"
     }
     func operationResult() -> String {
