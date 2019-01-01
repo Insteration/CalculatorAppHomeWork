@@ -40,7 +40,7 @@ class ViewController: UIViewController {
             case 2:
                 _ = calculator.operationMultiplication()
             case 3:
-                calculatorLabelText.text = "/"
+                _ = calculator.operationDivision()
             case 4:
                 calculatorLabelText.text = calculator.operationResult()
             default:

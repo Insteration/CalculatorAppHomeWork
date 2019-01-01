@@ -29,6 +29,7 @@ class Calculator: CalculatorProtocol {
     
     
     func operationSetNumber(_ numeral: String) -> String {
+//        guard let number = Int(String(number) + numeral) else { return "0" }
         number = Int(String(number) + numeral) ?? 0
         return String(number)
     }
@@ -65,7 +66,9 @@ class Calculator: CalculatorProtocol {
                 result &= result / number
             }
         }
-        return (String(result), 3)
+        number = 0
+        operand = 3
+        return (String(result), operand)
     }
     
     func operationMultiplication() -> (String, Int) {
@@ -95,14 +98,14 @@ class Calculator: CalculatorProtocol {
             result &-= number
             number = 0
         case 3:
-            ()
+            result &= result / number
+            number = 0
         case 4:
             result &*= number
             number = 0
         default:
             ()
         }
-//        operand = 0
         print("result is \(result)")
         return String(result)
     }
