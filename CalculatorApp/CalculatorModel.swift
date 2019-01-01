@@ -10,10 +10,10 @@ import Foundation
 
 protocol CalculatorProtocol {
     func operationSetNumber(_ numeral: String) -> String
-    func operationPlus() -> String
-    func operationMinus() -> String
-    func operationDivision() -> String
-    func operationMultiplication() -> String
+    func operationPlus() -> (String, Int)
+    func operationMinus() -> (String, Int)
+    func operationDivision() -> (String, Int)
+    func operationMultiplication() -> (String, Int)
     func operationClear() -> String
     func operationResult() -> String
 }
@@ -27,31 +27,56 @@ class Calculator: CalculatorProtocol {
     private var result = 0
     private var operand = 0
     
+    
     func operationSetNumber(_ numeral: String) -> String {
         number = Int(String(number) + numeral) ?? 0
         return String(number)
     }
     
-    func operationPlus() -> String {
+    func operationPlus() -> (String, Int) {
         if result == 0 {
             result = number
         } else {
             result &+= number
         }
         number = 0
-        return String(result)
+        operand = 1
+        return (String(result), operand)
     }
     
-    func operationMinus() -> String {
-        return "0"
+    func operationMinus() -> (String, Int) {
+        if result == 0 {
+            result = number
+        } else {
+            result &-= number
+        }
+        number = 0
+        operand = 2
+        return (String(result), operand)
     }
     
-    func operationDivision() -> String {
-        return "0"
+    func operationDivision() -> (String, Int) {
+        if result == 0 {
+            result = number
+        } else {
+            if number == 0 {
+                print("ERROR!")
+            } else {
+                result &= result / number
+            }
+        }
+        return (String(result), 3)
     }
     
-    func operationMultiplication() -> String {
-        return "0"
+    func operationMultiplication() -> (String, Int) {
+        if result == 0 {
+            result = number
+        } else {
+            result &*= number
+        }
+        number = 0
+        operand = 4
+        return (String(result), 4)
     }
     
     func operationClear() -> String {
@@ -60,9 +85,24 @@ class Calculator: CalculatorProtocol {
         print("Clear succesfull!")
         return "0"
     }
+    
     func operationResult() -> String {
-        result &+= number
-        number = 0
+        switch operand {
+        case 1:
+            result &+= number
+            number = 0
+        case 2:
+            result &-= number
+            number = 0
+        case 3:
+            ()
+        case 4:
+            result &*= number
+            number = 0
+        default:
+            ()
+        }
+//        operand = 0
         print("result is \(result)")
         return String(result)
     }

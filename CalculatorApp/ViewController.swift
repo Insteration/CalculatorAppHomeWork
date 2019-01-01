@@ -35,11 +35,13 @@ class ViewController: UIViewController {
             switch calculatorMathmaticalOperation {
             case 0:
                 calculatorLabelText.text = "+"
-                calculator.operationPlus()
+                _ = calculator.operationPlus()
             case 1:
                 calculatorLabelText.text = "-"
+                _ = calculator.operationMinus()
             case 2:
                 calculatorLabelText.text = "*"
+                _ = calculator.operationMultiplication()
             case 3:
                 calculatorLabelText.text = "/"
             case 4:
