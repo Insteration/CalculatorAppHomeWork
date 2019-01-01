@@ -98,6 +98,7 @@ class Calculator: CalculatorProtocol {
         case 3:
             print("result divide in operRes \(result), number is \(number)")
             if number == 0 {
+                print("ERROR! Can't divide on zero!")
                 break
             } else {
             result /= number
