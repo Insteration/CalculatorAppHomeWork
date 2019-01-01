@@ -29,7 +29,6 @@ class Calculator: CalculatorProtocol {
     
     
     func operationSetNumber(_ numeral: String) -> String {
-//        guard let number = Int(String(number) + numeral) else { return "0" }
         number = Int(String(number) + numeral) ?? 0
         return String(number)
     }
@@ -83,6 +82,7 @@ class Calculator: CalculatorProtocol {
     }
     
     func operationClear() -> String {
+        number = 0
         result = 0
         operand = 0
         print("Clear succesfull!")
