@@ -53,12 +53,9 @@ class Calculator: CalculatorProtocol {
     func operationDivision() -> (String, Int) {
         if result == 0 {
             result = number
-            print("result division = \(result)")
         } else if number == 0 {
             number = result
-            print("number on else if - \(number)")
         } else {
-            print("res \(result) = \(result) divide on \(number)")
             result &= result / number
         }
         number = 0
@@ -96,7 +93,6 @@ class Calculator: CalculatorProtocol {
             result &-= number
             number = 0
         case 3:
-            print("result divide in operRes \(result), number is \(number)")
             if number == 0 {
                 print("ERROR! Can't divide on zero!")
                 break
@@ -110,8 +106,7 @@ class Calculator: CalculatorProtocol {
         default:
             ()
         }
-        print("result is \(result)")
+        print("Result is \(result)")
         return String(result)
     }
-    
 }
