@@ -19,14 +19,9 @@ protocol CalculatorProtocol {
 }
 
 class Calculator: CalculatorProtocol {
-    private var number = 0 {
-        didSet {
-            print(oldValue)
-        }
-    }
+    private var number = 0
     private var result = 0
     private var operand = 0
-    
     
     func operationSetNumber(_ numeral: String) -> String {
         number = Int(String(number) + numeral) ?? 0
@@ -59,12 +54,14 @@ class Calculator: CalculatorProtocol {
         if result == 0 {
             result = number
             print("result division = \(result)")
-            number = 0
+        } else if number == 0 {
+            number = result
+            print("number on else if - \(number)")
         } else {
-            result &= result / number
             print("res \(result) = \(result) divide on \(number)")
+            result &= result / number
         }
-//        number = 0
+        number = 0
         operand = 3
         return (String(result), operand)
     }
@@ -72,6 +69,8 @@ class Calculator: CalculatorProtocol {
     func operationMultiplication() -> (String, Int) {
         if result == 0 {
             result = number
+        } else if number == 0 {
+            number = result
         } else {
             result &*= number
         }
